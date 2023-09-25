@@ -217,6 +217,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
       width: widget.width,
       margin: widget.margin ?? EdgeInsets.symmetric(horizontal: 16.0),
       child: Stack(
+        alignment: Alignment.bottomLeft,
         children: [
           Container(
             decoration: _boxDecoration,
@@ -230,14 +231,16 @@ class _BannerCarouselState extends State<BannerCarousel> {
               children: _listBanners,
             ),
           ),
-          widget.showIndicator ? _indicatorRow : SizedBox()
+          widget.showIndicator ? Container(child: _indicatorRow) : SizedBox()
         ],
       ),
     );
   }
 
-  Align get _indicatorRow => Align(
-        alignment: Alignment.bottomCenter,
+  Positioned get _indicatorRow => Positioned(
+        bottom: 40,
+        left: 30,
+        // alignment: Alignment.bottomLeft,
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Row(
@@ -250,7 +253,8 @@ class _BannerCarouselState extends State<BannerCarousel> {
   BoxDecoration get _boxDecoration => BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: _shadowColor,
+            color: Colors.transparent,
+            // color: _shadowColor,
             spreadRadius: 0,
             blurRadius: 4,
             offset: Offset(0, 3),

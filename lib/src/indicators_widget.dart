@@ -24,15 +24,15 @@ class CarouselIndicatorWidget extends StatelessWidget {
       _doAnimation ? sizeIndicator.widthExpanded : sizeIndicator.width;
   double get _padding =>
       _doAnimation ? sizeIndicator.paddingExpanded : sizeIndicator.padding;
-  double get _height =>
-      _doAnimation ? sizeIndicator.heightExpanded : sizeIndicator.height;
+  // double get _height =>
+  //     _doAnimation ? sizeIndicator.heightExpanded : sizeIndicator.height;
 
   @override
   Widget build(BuildContext context) {
     return IndicatorAnimatedWidget(
         padding: _padding,
         width: _width,
-        height: _height,
+        height: 5,
         color: color,
         dotBorderRadius: dotBorderRadius);
   }
