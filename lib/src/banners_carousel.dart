@@ -238,8 +238,8 @@ class _BannerCarouselState extends State<BannerCarousel> {
   }
 
   Positioned get _indicatorRow => Positioned(
-        bottom: 40,
-        left: 30,
+        bottom: 35,
+        left: 20,
         // alignment: Alignment.bottomLeft,
         child: Padding(
           padding: EdgeInsets.all(8.0),
