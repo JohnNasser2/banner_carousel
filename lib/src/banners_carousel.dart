@@ -237,9 +237,9 @@ class _BannerCarouselState extends State<BannerCarousel> {
     );
   }
 
-  Positioned get _indicatorRow => Positioned(
-        bottom: 35,
-        left: 20,
+  Align get _indicatorRow => Align(
+    alignment: Alignment.bottomCenter,
+        // left: 20,
         // alignment: Alignment.bottomLeft,
         child: Padding(
           padding: EdgeInsets.all(8.0),
@@ -249,6 +249,18 @@ class _BannerCarouselState extends State<BannerCarousel> {
           ),
         ),
       );
+  // Positioned get _indicatorRow => Positioned(
+  //       bottom: 10,
+  //       // left: 20,
+  //       // alignment: Alignment.bottomLeft,
+  //       child: Padding(
+  //         padding: EdgeInsets.all(8.0),
+  //         child: Row(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           children: rowIndicator,
+  //         ),
+  //       ),
+  //     );
 
   BoxDecoration get _boxDecoration => BoxDecoration(
         boxShadow: [
