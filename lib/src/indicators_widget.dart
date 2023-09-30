@@ -32,8 +32,8 @@ class CarouselIndicatorWidget extends StatelessWidget {
     return IndicatorAnimatedWidget(
         padding: _padding,
         width: _width,
-        height: 10,
-        // height: 5,
+        // height: 10, // Abo Naeem
+        height: 5,
         color: color,
         dotBorderRadius: dotBorderRadius);
   }
